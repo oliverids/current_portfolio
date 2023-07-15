@@ -1,0 +1,144 @@
+header {
+  background: var(--branco);
+  padding: .5rem 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+
+  &.scroll {
+    box-shadow: 0px 1px #0000001c;
+  }
+
+  .container {
+    align-items: center;
+    justify-content: space-between;
+
+    #logo {
+      color: #202020;
+      display: flex;
+    }
+
+    #menu {
+      width: 2.5rem;
+      height: 2.5rem;
+      
+      div {
+        width: 1.5rem;
+        height: .125rem;
+        background:transparent;
+        display: flex;
+        position: relative;
+        margin-left: auto;
+
+        &::before, &::after {
+          display: block;
+          content: '';
+          width: 1.5rem;
+          height: .125rem;
+          background: var(--preto);
+          position: absolute;
+          transition: .2s all ease-in-out;
+        }
+
+        &::before {
+          transform: translateY(-6px);
+        }
+
+        &::after {
+          transform: translateY(6px);
+        }
+      }
+    }
+
+    #nav_overlay {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      height: calc(100vh - 56px);
+      width: 100vw;
+      background: rgba(0, 0, 0, 0.3);
+      visibility: hidden;
+      opacity: 0;
+      transition: .3s all ease-in-out;
+
+      #nav {
+        position: fixed;
+        bottom: 0;
+        right: -18.5rem;
+        height: calc(100vh - 56px);
+        width: 18.5rem;
+        background: var(--branco);
+        padding: 2rem;
+        transition: .3s right ease-in-out;
+  
+        #internal_nav {
+          li {
+            &:not(:last-child) {
+              margin-bottom: 2rem;
+            }
+  
+            a {
+              font-weight: var(--semi);
+              font-size: 1.25rem;
+              letter-spacing: -0.3px;
+              color: var(--preto);
+            }
+          }
+        }
+
+        button {
+          width: 100%;
+          margin: 3rem 0 2rem;
+        }
+
+        #social_nav {
+          display: flex;
+
+          li {
+            &:not(:last-child) {
+              margin-right: 1.5rem;
+            }
+
+            a {
+              width: 1.6rem;
+              height: 1.6rem;
+
+              img {
+                margin: auto auto;
+              }
+
+              &:hover {
+                text-decoration: none;
+                opacity: .5;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.ativo {
+    .container {
+      #menu div {
+        &::before {
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
+
+      #nav_overlay {
+        visibility: visible;
+        opacity: 1;
+
+        #nav {
+          right: 0;
+        }
+      }
+    }
+  }
+}
