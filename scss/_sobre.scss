@@ -16,11 +16,11 @@
       }
 
       li {
-        min-width: 24rem;
-        max-width: 24rem;
+        min-width: 20rem;
+        max-width: 20rem;
 
         &:not(:last-child) {
-          margin-right: 2rem;
+          margin-right: 1.25rem;
         }
 
         p {
@@ -28,6 +28,7 @@
 
           span {
             font-weight: var(--medium);
+            display: inline;
 
             &.bold {
               font-weight: var(--bold);
