@@ -1,6 +1,6 @@
 header {
   background: var(--branco);
-  padding: .5rem 0;
+  padding: .875rem 0;
   width: 100%;
   position: fixed;
   top: 0;
@@ -55,7 +55,7 @@ header {
       position: fixed;
       bottom: 0;
       left: 0;
-      height: calc(100vh - 56px);
+      height: calc(100vh - 68px);
       width: 100vw;
       background: rgba(0, 0, 0, 0.3);
       visibility: hidden;
@@ -66,7 +66,7 @@ header {
         position: fixed;
         bottom: 0;
         right: -18.5rem;
-        height: calc(100vh - 56px);
+        height: calc(100vh - 68px);
         width: 18.5rem;
         background: var(--branco);
         padding: 2rem;
@@ -89,6 +89,7 @@ header {
 
         button {
           width: 100%;
+          padding: 1rem 2.5rem;
           margin: 3rem 0 2rem;
         }
 

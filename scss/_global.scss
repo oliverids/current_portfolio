@@ -1,14 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
-
-:root {
-  --branco: #fff;
-  --preto: #000;
-
-  --regular: 400;
-  --medium: 500;
-  --semi: 600;
-  --bold: 700;
-}
+@import "variables";
 
 * {
   padding: 0;
@@ -30,7 +20,7 @@ img {
 
 a,
 span {
-  display: block;
+  display: inline-block;
 }
 
 a {
@@ -45,6 +35,17 @@ ul {
   list-style: none;
 }
 
+p {
+  line-height: 1.5;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 1rem;
+}
+
 .container {
   padding: 0 1.5rem;
   display: flex;
@@ -55,18 +56,38 @@ ul {
   left: -999999999px;
 }
 
-button {
-  cursor: pointer;
-  border: none;
-  background: none;
-  font-size: 1rem;
+.btn_principal {
+  padding: 1rem 3rem;
+  background: var(--preto);
+  color: var(--branco);
+  font-weight: var(--semi);
+  letter-spacing: -0.015rem;
+  text-align: center;
+}
 
-  &.btn_principal {
-    padding: 1.125rem 2.5rem;
-    background: var(--preto);
-    color: var(--branco);
-    font-weight: var(--semi);
-    letter-spacing: -0.015rem;
-    text-align: center;
-  }
+//SCROLLBARS
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #CCCCCC #767676;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  width: .5rem;
+  height: .5rem;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 2px;
+  background-color: #a7a7a7;
+  border: 3px solid #FFFFFF;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #202020;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #323232;
 }
