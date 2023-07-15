@@ -56,8 +56,10 @@
   <main>
     <div class="container">
       <section id="main_info">
-        <p>Olá, meu nome é <span class="intro">Isabela Oliveira</span></p>
-        <h1>Criação de websites e aplicativos web</h1>
+        <div class="section_intro">
+          <p>Olá, meu nome é <span class="intro">Isabela Oliveira</span></p>
+          <h1>Criação de websites e aplicativos web</h1>
+        </div>
         <p>Desenvolvedora front-end e designer de interfaces, com mais de três anos de experiência em <span
             class="resumo">soluções digitais</span>.</p>
 
@@ -80,26 +82,49 @@
       <div class="container">
         <p>Experiências compartilhadas</p>
 
-        <ul>
-          <li><a href="https://forma.ufes.br/" target="_blank" rel="noopener noreferrer">
+        <ul class="horizontal_scroll">
+          <li><a href="https://forma.ufes.br/" target="_blank" rel="noopener noreferrer" title="Laboratório Forma">
             <img src="img/icon/forma.svg" alt="Logo do Laboratório Forma.">
           </a></li>
 
-          <li><a href="https://ldi.ufes.br/" target="_blank" rel="noopener noreferrer">
+          <li><a href="https://ldi.ufes.br/" target="_blank" rel="noopener noreferrer" title="Laboratório de Design Instrucional">
             <img src="img/icon/ldi.svg" alt="Logo do Laboratório de Design Instrucional.">
           </a></li>
 
-          <li><a href="https://sead.ufes.br/" target="_blank" rel="noopener noreferrer">
-            <img src="img/icon/sead.svg" alt="Logo da Superintendência de Educação a Distância.">
+          <li><a href="https://sead.ufes.br/" target="_blank" rel="noopener noreferrer" title="Superintendência de Educação a Distância da UFES">
+            <img src="img/icon/sead.svg" alt="Logo da Superintendência de Educação a Distância da UFES.">
           </a></li>
 
-          <li><a href="http://webicos.com/" target="_blank" rel="noopener noreferrer">
+          <li><a href="http://webicos.com/" target="_blank" rel="noopener noreferrer" title="Coletivo Wébicos">
             <img src="img/icon/webicos.svg" alt="Logo do Coletivo Wébicos.">
           </a></li>
         </ul>
       </div>
     </section>
   </main>
+
+  <section id="sobre" class="section">
+    <div class="container">
+      <div class="section_intro">
+        <p>Sobre mim e minha trajetória</p>
+        <h2>Graduada em Design e entusiasta do Desenvolvimento</h2>
+      </div>
+
+      <ul class="horizontal_scroll">
+        <li>
+          <p class="ufes">Graduação em <span>Design</span> na <span>Universidade Federal do Espírito Santo (UFES)</span>.</p>
+        </li>
+
+        <li>
+          <p class="xpe">Graduação <span class="bold">(in curso)</span> em <span>Análise e Desenvolvimento de Sistemas</span> da <span>XP Educação (XPE)</span>.</p>
+        </li>
+
+        <li>
+          <p class="tempo">Mais de <span>3 anos</span> de atuação na área de criação de <span>websites e aplicativos web</span>.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
 
   <script src="js/main.js"></script>
 </body>

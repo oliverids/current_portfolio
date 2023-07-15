@@ -1,0 +1,61 @@
+#sobre {
+  .container {
+    flex-direction: column;
+
+    .horizontal_scroll {
+      align-items: flex-start;
+
+      &::-webkit-scrollbar-track {
+        background-color: #b1b1b1;
+        border-color: var(--branco);
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--preto);
+        border-color: var(--branco);
+      }
+
+      li {
+        min-width: 24rem;
+        max-width: 24rem;
+
+        &:not(:last-child) {
+          margin-right: 2rem;
+        }
+
+        p {
+          line-height: 1.75;
+
+          span {
+            font-weight: var(--medium);
+
+            &.bold {
+              font-weight: var(--bold);
+              color: #434343;
+            }
+          }
+
+          &::before {
+            display: flex;
+            width: 2rem;
+            height: 2rem;
+            transform: scale(.8);
+            margin-bottom: 1.25rem;
+          }
+
+          &.ufes::before {
+            content: url(../img/icon/ufes.svg);
+          }
+
+          &.xpe::before {
+            content: url(../img/icon/xpe.svg);
+          }
+
+          &.tempo::before {
+            content: url(../img/icon/tempo.svg);
+          }
+        }
+      }
+    }
+  }
+}

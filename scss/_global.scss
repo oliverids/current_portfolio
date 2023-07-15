@@ -65,6 +65,52 @@ button {
   text-align: center;
 }
 
+.horizontal_scroll {
+  margin-top: 3.5rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 1rem;
+
+  &::-webkit-scrollbar-track {
+    border-radius: 2px;
+    border: 2px solid currentColor;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 1px solid currentColor;
+  }
+}
+
+.section {
+  margin: 3.5rem 0;
+}
+
+.section_intro {
+  * {text-align: center;}
+
+  p {
+    margin-bottom: .5rem;
+  }
+
+  h1 {
+    line-height: 1.1;
+    font-size: var(--size_h1);
+    letter-spacing: -0.0525rem;
+    margin: .375rem 0 .75rem;
+  }
+
+  h2 {
+    line-height: 1.1;
+    font-size: var(--size_h2);
+    font-weight: var(--bold);
+    letter-spacing: -0.045rem;
+  }
+}
+
 //SCROLLBARS
 /* Firefox */
 * {

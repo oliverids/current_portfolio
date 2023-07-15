@@ -20,8 +20,6 @@ main {
       }
 
       h1 {
-        line-height: 1.1;
-        font-size: var(--size_h1);
         margin: .375rem 0 .75rem;
       }
 
@@ -87,7 +85,6 @@ main {
         font-size: 1.25rem;
         letter-spacing: -0.0375rem;
         line-height: 1.3;
-        margin-bottom: 3.5rem;
 
         &::before {
           content: url(../img/icon/experiencias_icon.svg);
@@ -96,23 +93,14 @@ main {
       }
 
       ul {
-        display: flex;
-        align-items: center;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
-        padding-bottom: 1rem;
-
         &::-webkit-scrollbar-track {
-          border-radius: 2px;
           background-color: #555555;
-          border: 2px solid var(--preto);
+          border-color:  var(--preto);
         }
 
         &::-webkit-scrollbar-thumb {
           background-color: var(--branco);
-          border: 1px solid var(--preto);
+          border-color:  var(--preto);
         }
 
         li {
