@@ -71,7 +71,8 @@ header {
         background: var(--branco);
         padding: 2rem;
         transition: .3s right ease-in-out;
-  
+        z-index: 6;
+        
         #internal_nav {
           li {
             &:not(:last-child) {

@@ -1,10 +1,24 @@
 const menu_button = document.getElementById('menu'),
   header = document.querySelector('header'),
+  nav = document.getElementById('nav'),
   internal_links = document.querySelectorAll('#internal_nav a');
 
 menu_button.addEventListener('click', () => {
   header.classList.toggle('ativo');
 })
+
+window.onclick = e => {
+  if (
+    header.classList.contains('ativo') &&
+    !e.target.matches('#nav') &&
+    !e.target.matches('#header') &&
+    !e.target.matches('#header .container') &&
+    !e.target.matches('#menu') &&
+    !e.target.matches('#menu div')
+  ) {
+    header.classList.remove('ativo')
+  }
+};
 
 internal_links.forEach(each => {
   each.addEventListener('click', e => {
