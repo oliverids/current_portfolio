@@ -52,10 +52,10 @@ header {
     }
 
     #nav_overlay {
-      position: fixed;
-      bottom: 0;
+      position: absolute;
+      top: 4.25rem;
       left: 0;
-      height: calc(100vh - 68px);
+      height: calc(100vh - 4.25rem);
       width: 100vw;
       background: rgba(0, 0, 0, 0.3);
       visibility: hidden;
@@ -121,26 +121,26 @@ header {
     }
   }
 
-  // &.ativo {
-  //   .container {
-  //     #menu div {
-  //       &::before {
-  //         transform: rotate(45deg);
-  //       }
+  &.ativo {
+    .container {
+      #menu div {
+        &::before {
+          transform: rotate(45deg);
+        }
 
-  //       &::after {
-  //         transform: rotate(-45deg);
-  //       }
-  //     }
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
 
-  //     #nav_overlay {
-  //       visibility: visible;
-  //       opacity: 1;
+      #nav_overlay {
+        visibility: visible;
+        opacity: 1;
 
-  //       #nav {
-  //         right: 0;
-  //       }
-  //     }
-  //   }
-  // }
+        #nav {
+          right: 0;
+        }
+      }
+    }
+  }
 }
