@@ -63,7 +63,7 @@ header {
       transition: .3s all ease-in-out;
 
       #nav {
-        position: fixed;
+        position: absolute;
         bottom: 0;
         right: -18.5rem;
         height: calc(100vh - 68px);
