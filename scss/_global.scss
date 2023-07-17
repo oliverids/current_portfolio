@@ -95,7 +95,7 @@ button {
 
 .section_intro {
   margin-bottom: 3.5rem;
-  
+
   * {text-align: center;}
 
   p {
@@ -142,4 +142,44 @@ button {
 
 *::-webkit-scrollbar-thumb:active {
   background-color: #323232;
+}
+
+@keyframes infiniteScroll {
+	0%   { transform: translateX(0%); }
+	100% { transform: translateX(-100%); }
+}
+
+#infinite_scroll {
+  background: var(--preto);
+  padding: 2.9rem 0;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  
+  &:hover ul {
+    animation-play-state: paused;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+		animation: infiniteScroll 10s linear infinite;
+
+    li {
+      color: var(--branco);
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+
+      &::before {
+        content: url(../img/icon/infinite_scroll_icon.svg);
+        margin-right: 2rem;
+      }
+
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+  }
 }
