@@ -31,6 +31,13 @@
             font-weight: var(--bold);
             margin: .25rem 0 .75rem;
           }
+
+          p a {
+              display: inline;
+              color: var(--preto);
+              text-decoration: underline;
+            }
+          
   
           a {
             display: block;

@@ -87,6 +87,10 @@ button {
   &::-webkit-scrollbar-thumb {
     border: 1px solid currentColor;
   }
+
+  li:not(:last-child) {
+    margin-right: 1.25rem;
+  }
 }
 
 .section {
