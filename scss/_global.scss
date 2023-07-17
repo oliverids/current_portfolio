@@ -55,7 +55,7 @@ button {
   display: flex;
 }
 
-.hide_span span{
+.hide_span span {
   position: absolute;
   left: -999999999px;
 }
@@ -100,7 +100,9 @@ button {
 .section_intro {
   margin-bottom: 3.5rem;
 
-  * {text-align: center;}
+  * {
+    text-align: center;
+  }
 
   p {
     margin-bottom: .5rem;
@@ -133,6 +135,7 @@ button {
   width: .5rem;
   height: .5rem;
 }
+
 *::-webkit-scrollbar-track {
   border-radius: 2px;
   background-color: #a7a7a7;
@@ -149,32 +152,28 @@ button {
 }
 
 @keyframes infiniteScroll {
-	0%   { transform: translateX(0%); }
-	100% { transform: translateX(-100%); }
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
-#infinite_scroll {
+marquee {
   background: var(--preto);
   padding: 2.9rem 0;
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-  
-  &:hover ul {
-    animation-play-state: paused;
-  }
 
   ul {
     display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-		animation: infiniteScroll 5s linear infinite;
-
     li {
-      color: var(--branco);
       display: flex;
       align-items: center;
+      color: var(--branco);
       white-space: nowrap;
+      min-width: fit-content !important;
+      max-width: fit-content !important;
 
       &::before {
         content: url(../img/icon/infinite_scroll_icon.svg);

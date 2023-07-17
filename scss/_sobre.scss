@@ -1,8 +1,7 @@
 #sobre {
   .container {
-    .horizontal_scroll {
+    #sobre_slider {
       margin-top: 0;
-      
       align-items: flex-start;
 
       &::-webkit-scrollbar-track {
@@ -16,12 +15,12 @@
       }
 
       li {
-        min-width: 20rem;
-        max-width: 20rem;
+        min-width: 20rem !important;
+        max-width: 20rem !important;
 
-        &:not(:last-child) {
-          margin-right: 1.25rem;
-        }
+        // &:not(:last-child) {
+        //   margin-right: 1.25rem;
+        // }
 
         p {
           line-height: 1.75;
