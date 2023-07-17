@@ -1,8 +1,8 @@
 #sobre {
   .container {
-    flex-direction: column;
-
     .horizontal_scroll {
+      margin-top: 0;
+      
       align-items: flex-start;
 
       &::-webkit-scrollbar-track {

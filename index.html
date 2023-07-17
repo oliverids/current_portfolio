@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <title>Document</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.css">
 </head>
 
 <body>
@@ -84,20 +86,22 @@
 
         <ul class="horizontal_scroll">
           <li><a href="https://forma.ufes.br/" target="_blank" rel="noopener noreferrer" title="Laboratório Forma">
-            <img src="img/icon/forma.svg" alt="Logo do Laboratório Forma.">
-          </a></li>
+              <img src="img/icon/forma.svg" alt="Logo do Laboratório Forma.">
+            </a></li>
 
-          <li><a href="https://ldi.ufes.br/" target="_blank" rel="noopener noreferrer" title="Laboratório de Design Instrucional">
-            <img src="img/icon/ldi.svg" alt="Logo do Laboratório de Design Instrucional.">
-          </a></li>
+          <li><a href="https://ldi.ufes.br/" target="_blank" rel="noopener noreferrer"
+              title="Laboratório de Design Instrucional">
+              <img src="img/icon/ldi.svg" alt="Logo do Laboratório de Design Instrucional.">
+            </a></li>
 
-          <li><a href="https://sead.ufes.br/" target="_blank" rel="noopener noreferrer" title="Superintendência de Educação a Distância da UFES">
-            <img src="img/icon/sead.svg" alt="Logo da Superintendência de Educação a Distância da UFES.">
-          </a></li>
+          <li><a href="https://sead.ufes.br/" target="_blank" rel="noopener noreferrer"
+              title="Superintendência de Educação a Distância da UFES">
+              <img src="img/icon/sead.svg" alt="Logo da Superintendência de Educação a Distância da UFES.">
+            </a></li>
 
           <li><a href="http://webicos.com/" target="_blank" rel="noopener noreferrer" title="Coletivo Wébicos">
-            <img src="img/icon/webicos.svg" alt="Logo do Coletivo Wébicos.">
-          </a></li>
+              <img src="img/icon/webicos.svg" alt="Logo do Coletivo Wébicos.">
+            </a></li>
         </ul>
       </div>
     </section>
@@ -112,20 +116,70 @@
 
       <ul class="horizontal_scroll">
         <li>
-          <p class="ufes">Graduação em <span>Design</span> na <span>Universidade Federal do Espírito Santo (UFES)</span>.</p>
+          <p class="ufes">Graduação em <span>Design</span> na <span>Universidade Federal do Espírito Santo
+              (UFES)</span>.</p>
         </li>
 
         <li>
-          <p class="xpe">Graduação <span class="bold">(in curso)</span> em <span>Análise e Desenvolvimento de Sistemas</span> da <span>XP Educação (XPE)</span>.</p>
+          <p class="xpe">Graduação <span class="bold">(in curso)</span> em <span>Análise e Desenvolvimento de
+              Sistemas</span> da <span>XP Educação (XPE)</span>.</p>
         </li>
 
         <li>
-          <p class="tempo">Mais de <span>3 anos</span> de atuação na área de criação de <span>websites e aplicativos web</span>.</p>
+          <p class="tempo">Mais de <span>3 anos</span> de atuação na área de criação de <span>websites e aplicativos
+              web</span>.</p>
         </li>
       </ul>
     </div>
   </section>
 
+  <section id="cases" class="section">
+    <div class="container">
+      <div class="section_intro">
+        <p>Confira parte dos meus projetos</p>
+        <h2>Cases de projetos</h2>
+      </div>
+
+        <!-- navigation-wrapper -->
+        <ul id="my-keen-slider" class="keen-slider">
+          <li class="case_item keen-slider__slide">
+            <div class="case_info">
+              <img src="img/case_livro-digital.png" alt="">
+              <span>Laboratório de Design Instrucional</span>
+              <h3>Recortes e Perspectivas Sobre a História Moderna</h3>
+              <p>Aplicativo de web e Livro Digital desenvolvido para o curso de História EAD na UFES, onde participei ativamente na manutenção do código.</p>
+
+              <a href="https://acervo.sead.ufes.br/materiais/historia/recortes-e-perspectivas/" target="_blank" rel="noopener noreferrer" class="btn_principal">Confira o projeto</a>
+            </div>
+          </li>
+
+          <li class="case_item keen-slider__slide">
+            <div class="case_info">
+              <img src="img/case_sead-seminario.png" alt="">
+              <span>Superintendência de Educação a Distância</span>
+              <h3>1º Seminário Pós-graduação Lato Sensu Educação em Direitos Humanos</h3>
+              <p>Landing Page para o 1º Seminário Regional da Pós-graduação Lato Sensu em Direitos Humanos, pela SEAD.</p>
+
+              <a href="https://sead.ufes.br/eventos/direitos-humanos-e-cidadania/" target="_blank" rel="noopener noreferrer" class="btn_principal">Confira o projeto</a>
+            </div>
+          </li>
+
+          <li class="case_item keen-slider__slide">
+            <div class="case_info">
+              <img src="img/case_asky.png" alt="">
+              <span>Projeto Pessoal</span>
+              <h3>Asky</h3>
+              <p>Projeto fullstack de uma plataforma social anônima para perguntas e respostas, na qual se pode colaborar criando perguntas e comentando as respostas enviadas por outros usuários.</p>
+              <a href="https://you-asky.herokuapp.com/" target="_blank" rel="noopener noreferrer" class="btn_principal">Confira o projeto</a>
+            </div>
+          </li>
+        </ul>
+    </div>
+  </section>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js"></script>
+  <script src="js/keen_slider.js"></script>
   <script src="js/main.js"></script>
 </body>
 

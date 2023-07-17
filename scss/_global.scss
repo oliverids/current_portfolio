@@ -87,9 +87,15 @@ button {
 
 .section {
   margin: 3.5rem 0;
+
+  .container {
+    flex-direction: column;
+  }
 }
 
 .section_intro {
+  margin-bottom: 3.5rem;
+  
   * {text-align: center;}
 
   p {
