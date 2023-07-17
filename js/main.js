@@ -36,7 +36,14 @@ internal_links.forEach(each => {
   })
 })
 
-let topo;
 window.addEventListener('scroll', e => {
   window.scrollY !== 0 ? header.classList.add('scroll') : header.classList.remove('scroll');
+});
+
+
+const copyEmail = document.getElementById('email');
+copyEmail.addEventListener('click', () => {
+    navigator.clipboard.writeText('isabela@webicos.com');
+    copyEmail.classList.add('ativo')
+    setTimeout(() => copyEmail.classList.remove('ativo'), 1000);
 });

@@ -25,7 +25,7 @@ function navigation(slider) {
 
   let counter = createDiv("counter"),
   span = document.createElement('span');
-  span.innerText = `1/3`;
+  span.innerText = `1/${document.getElementById('my-keen-slider').childElementCount}`;
   counter.appendChild(span);
 
   function arrowMarkup(remove) {

@@ -1,0 +1,78 @@
+#contatos {
+  background: var(--preto);
+  padding: 3.5rem 0;
+
+  .container {
+    flex-direction: column;
+    align-items: start;
+
+    * {
+      color: var(--branco);
+    }
+
+    p {
+      color: #CCCCCC;
+
+      &.creditos {
+        font-size: .75rem;
+        margin: 0 auto;
+
+        &:not(:last-child) {
+          margin-bottom: .5rem;
+        }
+
+        a {
+          display: inline;
+        }
+      }
+    }
+
+    h2 {
+      width: fit-content;
+    }
+
+    .section_intro {
+      margin-bottom: 1rem;
+    }
+
+    button {
+      border: 1px solid var(--branco);
+      width: fit-content;
+      font-weight: var(--semi);
+      display: flex;
+      align-items: center;
+      margin: 2rem 0 3rem;
+      position: relative;
+
+      &::after {
+        content: url(../img/icon/copy.svg);
+        margin-left: 1rem;
+      }
+
+      &::before {
+        display: block;
+        content: 'Copiado!';
+        background: var(--branco);
+        color: var(--preto);
+        padding: 1rem 3rem;
+        text-align: center;
+        font-weight: var(--semi);
+        letter-spacing: -0.015rem;
+        position: absolute;
+        top: 0;
+        right: 25%;
+        box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.5);
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s all ease-in-out;
+      }
+
+      &.ativo::before {
+        top: -4.5rem;
+        visibility: visible;
+        opacity: 1;
+        transition: .3s all ease-in-out;
+      }
+    }
+  }
+}
