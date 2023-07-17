@@ -1,0 +1,42 @@
+#experiencias {
+  .container {
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &:not(:last-child) {
+          margin-bottom: 3rem;
+        }
+
+        svg {
+          display: block;
+          height: 1.5rem;
+          width: fit-content;
+          margin-bottom: 1rem;
+        }
+
+        span {
+          color: var(--cinza);
+
+          &:not(:last-child) {
+            margin-bottom: .5rem;
+          }
+        }
+
+        p {
+          margin: 1rem 0 1.5rem;
+        }
+
+        a {
+          width: fit-content;
+        }
+      }
+    }
+  }
+}
