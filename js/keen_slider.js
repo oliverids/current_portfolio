@@ -4,7 +4,7 @@ var slider1 = new KeenSlider("#experiencias_slider", {
   slides: {
     origin: "center",
     perView: 3,
-    spacing: 44
+    spacing: 60
   },
 })
 
