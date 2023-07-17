@@ -14,27 +14,10 @@ var slider2 = new KeenSlider("#sobre_slider", {
   slides: {
     origin: "center",
     perView: 1,
-    spacing: 20,
+    spacing: 15,
   },
 })
 
-//INFINITE SCROLL BANNER
-// var animation = { duration: 10000, easing: (t) => t }
-
-// var slider3 = new KeenSlider("#infinite_slider", {
-//   loop: true,
-//   renderMode: "performance",
-//   drag: false,
-//   created(s) {
-//     s.moveToIdx(5, true, animation)
-//   },
-//   updated(s) {
-//     s.moveToIdx(s.track.details.abs + 5, true, animation)
-//   },
-//   animationEnded(s) {
-//     s.moveToIdx(s.track.details.abs + 5, true, animation)
-//   },
-// })
 
 //CASES
 function navigation(slider) {
