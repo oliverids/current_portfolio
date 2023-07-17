@@ -18,7 +18,6 @@ var slider1 = new KeenSlider("#experiencias_slider", {
 //   },
 // })
 
-
 //CASES
 function navigation(slider) {
   let wrapper, dots, arrowLeft, arrowRight
