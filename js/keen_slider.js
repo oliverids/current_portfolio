@@ -8,16 +8,6 @@ var slider1 = new KeenSlider("#experiencias_slider", {
   },
 })
 
-//SOBRE MIM
-// var slider2 = new KeenSlider("#sobre_slider", {
-//   mode: "free-snap",
-//   slides: {
-//     origin: "center",
-//     perView: 2,
-//     spacing: 15,
-//   },
-// })
-
 //CASES
 function navigation(slider) {
   let wrapper, dots, arrowLeft, arrowRight
