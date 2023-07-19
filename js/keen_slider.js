@@ -4,7 +4,7 @@ let screen_width = window.innerWidth;
 let main_experiencias_slider = new KeenSlider("#experiencias_slider", {
   slides: {
     origin: "center",
-    perView: 2.2,
+    perView: screen_width < 576 ? 2.2 : 2.5,
     spacing: 60
   },
 })
@@ -12,10 +12,11 @@ let main_experiencias_slider = new KeenSlider("#experiencias_slider", {
 
 let sobre_slider = new KeenSlider("#sobre_slider", {
   slides: {
-    perView: screen_width < 576 ? 1.2 : 1.5,
+    perView: screen_width < 576 ? 1.2 : screen_width < 768 ? 1.5 : 1.7,
     spacing: 30
   },
 })
+
 
 //CASES
 function navigation(slider) {
@@ -45,7 +46,7 @@ function navigation(slider) {
 
   let counter = createDiv("counter"),
   span = document.createElement('span');
-  span.innerText = `1/${document.getElementById('my-keen-slider').childElementCount}`;
+  span.innerText = `1/${slider.slides.length}`;
   counter.appendChild(span);
 
   function arrowMarkup(remove) {
@@ -109,7 +110,13 @@ function navigation(slider) {
     //     : dot.classList.remove("dot--active")
     // })
 
-    span.innerText = `${slide + 1}/${slider.track.details.length +1}`;
+    if(screen_width >= 768 && slide +1 == slider.track.details.slides.length - 1) {
+      arrowRight.classList.add("arrow--disabled")
+    } else {
+      arrowRight.classList.remove("arrow--disabled")
+    }
+
+    span.innerText = `${slide + 1}/${screen_width < 768 ? slider.slides.length : slider.slides.length - 1}`;
   }
 
   slider.on("created", () => {
@@ -128,8 +135,18 @@ function navigation(slider) {
   slider.on("destroyed", () => {
     markup(true)
   })
+
+
 }
 
-let cases_slider = new KeenSlider("#my-keen-slider", {}, [navigation])
+let cases_slider = new KeenSlider("#my-keen-slider", {
+  slides: {
+    perView: screen_width < 768 ? 1 : 2,
+    spacing: 56
+  },
+}, [navigation])
+
+// console.log(cases_slider)
+
 
 
