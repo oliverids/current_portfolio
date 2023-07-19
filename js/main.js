@@ -27,10 +27,12 @@ internal_links.forEach(each => {
     const href = event.currentTarget.getAttribute('href'),
       section = document.querySelector(href);
 
-    section.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
+    window.scrollTo({
+      top: section.offsetTop - 100,
+      behavior: 'smooth'
     });
+
+    console.log(section.getBoundingClientRect().top - 100)
 
     header.classList.remove('ativo')
   })
