@@ -15,4 +15,10 @@
   --size_h2: 1.5rem;
   --size_h3: 1.25rem;
   --size_span-info: .875rem;
+
+  @media only screen and (min-width: 48rem) {
+    --size_p: 1rem;
+    --size_h1: 2.75rem;
+    --size_h2: 2rem;
+  }
 }

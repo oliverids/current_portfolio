@@ -6,6 +6,7 @@ main {
 
     #main_info {
       text-align: center;
+      margin-bottom: 2.5rem;
 
       .section_intro {
         margin-bottom: .75rem;
@@ -30,7 +31,7 @@ main {
       }
 
       a {
-        margin: 1.25rem 0 2.5rem;
+        margin-top: 1.25rem;
       }
     }
 
@@ -73,6 +74,11 @@ main {
           }
         }
       }
+
+      @media only screen and (min-width: 36rem) {
+        max-width: 32rem;
+        margin: 0 auto;
+      }
     }
   }
 
@@ -104,12 +110,12 @@ main {
 
         &::-webkit-scrollbar-track {
           background-color: #555555;
-          border-color:  var(--preto);
+          border-color: var(--preto);
         }
 
         &::-webkit-scrollbar-thumb {
           background-color: var(--branco);
-          border-color:  var(--preto);
+          border-color: var(--preto);
         }
 
         li {
@@ -131,6 +137,33 @@ main {
           &:hover {
             opacity: 1;
           }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  main {
+    padding-top: 8.5rem;
+
+    .container {
+      #main_info {
+        text-align: left;
+        margin-bottom: 3.5rem;
+
+        .section_intro {
+          * {
+            text-align: left;
+          }
+
+          h1 {
+            max-width: 27rem;
+          }
+        }
+
+        p {
+          margin: 0;
         }
       }
     }
