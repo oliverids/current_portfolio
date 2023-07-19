@@ -1,8 +1,12 @@
 #sobre {
   .container {
     #sobre_slider {
-      margin-top: 0;
+      margin: 0 auto;
       align-items: flex-start;
+
+      @media only screen and (min-width: 36rem) {
+        max-width: 85%;
+      }
 
       &::-webkit-scrollbar-track {
         background-color: #b1b1b1;
@@ -15,8 +19,8 @@
       }
 
       li {
-        min-width: 18rem !important;
-        max-width: 18rem !important;
+        // min-width: 18rem !important;
+        // max-width: 18rem !important;
 
         // &:not(:last-child) {
         //   margin-right: 1.25rem;
@@ -24,6 +28,7 @@
 
         p {
           line-height: 1.75;
+          max-width: 18rem;
 
           span {
             font-weight: var(--medium);

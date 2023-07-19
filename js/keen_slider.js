@@ -1,10 +1,19 @@
+let screen_width = window.innerWidth;
+
 //EXPERIENCIAS COMPARTILHADAS
-var slider1 = new KeenSlider("#experiencias_slider", {
-  mode: "free-snap",
+let main_experiencias_slider = new KeenSlider("#experiencias_slider", {
   slides: {
     origin: "center",
-    perView: 3,
+    perView: 2.2,
     spacing: 60
+  },
+})
+
+
+let sobre_slider = new KeenSlider("#sobre_slider", {
+  slides: {
+    perView: screen_width < 576 ? 1.2 : 1.5,
+    spacing: 30
   },
 })
 
@@ -121,6 +130,6 @@ function navigation(slider) {
   })
 }
 
-var slider4 = new KeenSlider("#my-keen-slider", {}, [navigation])
+let cases_slider = new KeenSlider("#my-keen-slider", {}, [navigation])
 
 
