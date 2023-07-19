@@ -41,6 +41,7 @@ ul {
 
 p {
   line-height: 1.5;
+  font-size: var(--size_p);
 }
 
 button {
@@ -53,6 +54,12 @@ button {
 .container {
   padding: 0 1.5rem;
   display: flex;
+
+  @media only screen and (min-width: 36rem) {
+    padding: 0;
+    width: 34rem;
+    margin: 0 auto;
+  }
 }
 
 .hide_span span {
@@ -103,6 +110,7 @@ button {
 
 .section_intro {
   margin-bottom: 3.5rem;
+  max-width: 32.75rem;
 
   * {
     text-align: center;
