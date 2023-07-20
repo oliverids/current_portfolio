@@ -86,6 +86,11 @@ button {
   font-weight: var(--semi);
   letter-spacing: -0.015rem;
   text-align: center;
+
+  // @media only screen and (min-width: 80rem) {
+  //   padding: 1.5rem 3rem;
+
+  // }
 }
 
 .horizontal_scroll {

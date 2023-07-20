@@ -358,19 +358,42 @@
 
   <footer id="contatos">
     <div class="container">
-      <div class="section_intro">
-        <p>Vamos conversar</p>
-        <h2>Contato</h2>
+      <div class="contatos_info">
+        <div class="section_intro">
+          <p>Vamos conversar</p>
+          <h2>Contato</h2>
+        </div>
+
+        <p>Quer começar um projeto, conversar, compartilhar um feedback? Mande um e-mail.</p>
+
+        <button id="email" class="btn_principal" title="Clique para copiar">isabela@webicos.com</button>
       </div>
 
-      <p>Quer começar um projeto, conversar, compartilhar um feedback? Mande um e-mail.</p>
+      <form class="contatos_form" action="https://formspree.io/f/xaygnjko" method="POST">
+        <div class="form_linha">
+          <div class="label_input">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" placeholder="Seu nome aqui" required>
+          </div>
 
-      <button id="email" class="btn_principal" title="Clique para copiar">isabela@webicos.com</button>
+          <div class="label_input">
+            <label for="input_email">E-mail</label>
+            <input type="input_email" name="input_email" id="input_email" placeholder="email@exemplo.com" required>
+          </div>
+        </div>
 
-      <p class="creditos">Isabela Oliveira © 2023. Todos os direitos reservados.</p>
-      <p class="creditos">UI Design desenvolvido pelo <a href="http://webicos.com/" target="_blank"
-          rel="noopener noreferrer">Coletivo Webicos</a>.</p>
+        <div class="label_input">
+          <label for="mensagem">Mensagem</label>
+          <textarea name="mensagem" id="mensagem" rows="1" placeholder="Escreva aqui sua mensagem" required></textarea>
+        </div>
+
+        <button type="submit" class="btn_principal">Enviar mensagem</button>
+      </form>
     </div>
+
+    <p class="creditos">Isabela Oliveira © 2023. Todos os direitos reservados.</p>
+    <p class="creditos">UI Design desenvolvido pelo <a href="http://webicos.com/" target="_blank"
+        rel="noopener noreferrer">Coletivo Webicos</a>.</p>
   </footer>
 
   <script src="js/keen_slider.js"></script>
