@@ -52,6 +52,12 @@
           }
         }
       }
+
+      @media only screen and (min-width: 64rem) {
+        li {
+          max-width: 27.5rem;
+        }
+      }
     }
   }
 }

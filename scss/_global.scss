@@ -57,15 +57,18 @@ button {
 
   @media only screen and (min-width: 36rem) {
     padding: 0;
-    width: 34rem;
+    max-width: 34rem;
     margin: 0 auto;
   }
 
   @media only screen and (min-width: 48rem) {
-    width: 44rem;
+    max-width: 44rem;
+  }
+
+  @media only screen and (min-width: 64rem) {
+    max-width: 58.5rem;
   }
 }
-
 
 .hide_span span {
   position: absolute;
@@ -146,6 +149,10 @@ button {
 
   @media only screen and (min-width: 36rem) {
     margin-bottom: 2.75rem;
+  }
+
+  @media only screen and (min-width: 64rem) {
+    margin-bottom: 3.5rem;
   }
 }
 

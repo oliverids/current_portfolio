@@ -1,5 +1,18 @@
 let screen_width = window.innerWidth;
 
+//DISABLING KEEN SLIDER FOR SCREEN WIDER THAN 1024PX
+if(screen_width > 1023) {
+  document.querySelectorAll('.disable-1024').forEach(each => {
+    each.classList.remove('keen-slider')
+    each.querySelectorAll('.keen-slider__slide').forEach(each => {
+      each.classList.remove('keen-slider__slide')
+
+    })
+  })
+}
+
+console.log(screen_width)
+
 //EXPERIENCIAS COMPARTILHADAS
 let main_experiencias_slider = new KeenSlider("#experiencias_slider", {
   slides: {
@@ -146,7 +159,7 @@ let cases_slider = new KeenSlider("#my-keen-slider", {
   },
 }, [navigation])
 
-// console.log(cases_slider)
+
 
 
 

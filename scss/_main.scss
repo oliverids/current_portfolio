@@ -103,6 +103,10 @@ main {
           content: url(../img/icon/experiencias_icon.svg);
           margin-right: 2rem;
         }
+
+        @media only screen and (min-width: 36rem) {
+          font-size: 1.5rem;
+        }
       }
 
       ul {
@@ -164,6 +168,56 @@ main {
 
         p {
           margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  main {
+    >.container {
+      flex-direction: row;
+
+      #main_info {
+        padding-top: 2rem;
+      }
+
+      #main_image {
+        .tooltip {
+          p {
+            font-size: .875rem;
+          }
+          
+          &.developer {
+            top: 3rem;
+            right: 1rem;
+          }
+        }
+      }
+    }
+
+    #main_experiencias {
+      #experiencias_slider {
+        width: 100%;
+        max-width: 48rem;
+        margin: 3.5rem auto 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        li {
+          width: 11rem;
+
+          a {
+            height: fit-content;
+
+            img {
+              height: 2.75rem;
+              width: auto;
+            }
+          }
+
         }
       }
     }
