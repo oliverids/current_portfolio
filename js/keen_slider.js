@@ -34,7 +34,7 @@ function navigation(slider) {
 
   function markup(remove) {
     wrapperMarkup(remove)
-    // dotMarkup(remove)
+    dotMarkup(remove)
     arrowMarkup(remove)
   }
 
@@ -92,19 +92,19 @@ function navigation(slider) {
     wrapper.appendChild(slider.container)
   }
 
-  // function dotMarkup(remove) {
-  //   if (remove) {
-  //     removeElement(dots)
-  //     return
-  //   }
-  //   dots = createDiv("dots")
-  //   slider.track.details.slides.forEach((_e, idx) => {
-  //     var dot = createDiv("dot")
-  //     dot.addEventListener("click", () => slider.moveToIdx(idx))
-  //     dots.appendChild(dot)
-  //   })
-  //   wrapper.appendChild(dots)
-  // }
+  function dotMarkup(remove) {
+    if (remove) {
+      removeElement(dots)
+      return
+    }
+    dots = createDiv("dots")
+    slider.track.details.slides.forEach((_e, idx) => {
+      var dot = createDiv("dot", "button")
+      dot.addEventListener("click", () => slider.moveToIdx(idx))
+      dots.appendChild(dot)
+    })
+    wrapper.appendChild(dots)
+  }
 
   function updateClasses() {
     var slide = slider.track.details.rel
@@ -114,19 +114,21 @@ function navigation(slider) {
     slide === slider.track.details.slides.length - 1
       ? arrowRight.classList.add("arrow--disabled")
       : arrowRight.classList.remove("arrow--disabled")
-    // Array.from(dots.children).forEach(function (dot, idx) {
-    //   idx === slide
-    //     ? dot.classList.add("dot--active")
-    //     : dot.classList.remove("dot--active")
-    // })
+    Array.from(dots.children).forEach(function (dot, idx) {
+      idx === slide
+        ? dot.classList.add("dot--active")
+        : dot.classList.remove("dot--active")
+    })
 
-    if(screen_width >= 768 && slide +1 == slider.track.details.slides.length - 1) {
-      arrowRight.classList.add("arrow--disabled")
-    } else {
-      arrowRight.classList.remove("arrow--disabled")
+    span.innerText = `${slide + 1}/${screen_width < 768 || screen_width > 1279? slider.slides.length : slider.slides.length - 1}`;
+
+    if(screen_width < 767) {
+      if(slide +1 == slider.track.details.slides.length - 1) {
+        arrowRight.classList.add("arrow--disabled")
+      } else {
+        arrowRight.classList.remove("arrow--disabled")
+      }
     }
-
-    span.innerText = `${slide + 1}/${screen_width < 768 ? slider.slides.length : slider.slides.length - 1}`;
   }
 
   slider.on("created", () => {
@@ -145,13 +147,11 @@ function navigation(slider) {
   slider.on("destroyed", () => {
     markup(true)
   })
-
-
 }
 
 let cases_slider = new KeenSlider("#my-keen-slider", {
   slides: {
-    perView: screen_width < 768 ? 1 : 2,
+    perView: 767 > screen_width ? 1 : screen_width > 1279 ? 1 : 2,
     spacing: 56
   },
 }, [navigation])

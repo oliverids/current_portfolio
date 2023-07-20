@@ -6,22 +6,22 @@
 
     #my-keen-slider {
       .case_item {
-        .case_info {
-          max-width: 30rem;
-          margin: 0 auto;
+        max-width: 30rem;
+        margin: 0 auto;
 
-          img {
-            width: 100%;
-            height: 10rem;
-            background: #EEEEEE;
-            margin-bottom: 1.25rem;
-            object-fit: cover;
+        img {
+          width: 100%;
+          height: 10rem;
+          background: #EEEEEE;
+          margin-bottom: 1.25rem;
+          object-fit: cover;
 
-            @media only screen and (min-width: 36rem) {
-              height: 13rem;
-            }
+          @media only screen and (min-width: 36rem) {
+            height: 13rem;
           }
+        }
 
+        .case_info {
           span {
             display: block;
             font-size: var(--size_span-info);
@@ -61,6 +61,10 @@
           }
         }
       }
+    }
+
+    .dots {
+      display: none;
     }
 
     .arrow_nav {
@@ -106,3 +110,84 @@
     }
   }
 }
+
+@media only screen and (min-width: 80rem) {
+  #cases {
+    .container {
+      position: relative;
+
+      .section_intro {
+        margin: 0 auto 3.5rem 0;
+      }
+    }
+
+    .navigation-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+
+      .dots {
+        order: 1;
+        width: .375rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-right: 3rem;
+
+        .dot {
+          width: 2px;
+          height: 6rem;
+          background: #C9C4C4;
+
+          &:not(:last-child) {
+            margin-bottom: 2rem;
+          }
+
+          &.dot--active {
+            width: .375rem;
+            background: var(--cinza);
+          }
+        }
+      }
+
+      #my-keen-slider {
+        order: 2;
+
+        .case_item {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          img {
+            order: 2;
+            width: 35rem;
+            height: 30rem;
+            margin-bottom: 0;
+          }
+
+          .case_info {
+            order: 1;
+            max-width: 30rem;
+
+            h3 {
+              max-width: 27rem;
+            }
+
+            a {
+              width: fit-content;
+              margin-left: 0;
+              margin-right: 0;
+            }
+          }
+        }
+      }
+  
+      .arrow_nav {
+        position: absolute;
+        top: 1rem;
+        right: 0;
+      }
+    }
+  }
+} 
