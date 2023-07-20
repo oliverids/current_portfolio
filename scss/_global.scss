@@ -68,6 +68,10 @@ button {
   @media only screen and (min-width: 64rem) {
     max-width: 58.5rem;
   }
+
+  @media only screen and (min-width: 80rem) {
+    max-width: 70rem;
+  }
 }
 
 .hide_span span {

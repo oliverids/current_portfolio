@@ -22,4 +22,8 @@
     --size_h2: 2rem;
     --size_h3: 1.5rem;
   }
+
+  @media only screen and (min-width: 80rem) {
+    --size_h1: 3.5rem;
+  }
 }

@@ -178,17 +178,20 @@ main {
   main {
     >.container {
       flex-direction: row;
+      justify-content: space-between;
 
       #main_info {
         padding-top: 2rem;
       }
 
       #main_image {
+        margin: 0;
+
         .tooltip {
           p {
             font-size: .875rem;
           }
-          
+
           &.developer {
             top: 3rem;
             right: 1rem;
@@ -219,6 +222,37 @@ main {
           }
 
         }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 80rem) {
+  main {
+    >.container {
+
+      #main_info {
+        max-width: 34rem;
+
+        .section_intro h1, p {
+          max-width: 100%;
+          margin: 0;
+        }
+      }
+
+      #main_image {
+        max-width: 34rem;
+      }
+    }
+
+    #main_experiencias {
+      .container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      #experiencias_slider {
+        margin: 0;
       }
     }
   }

@@ -11,8 +11,6 @@ if(screen_width > 1023) {
   })
 }
 
-console.log(screen_width)
-
 //EXPERIENCIAS COMPARTILHADAS
 let main_experiencias_slider = new KeenSlider("#experiencias_slider", {
   slides: {
@@ -29,7 +27,6 @@ let sobre_slider = new KeenSlider("#sobre_slider", {
     spacing: 30
   },
 })
-
 
 //CASES
 function navigation(slider) {

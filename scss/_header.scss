@@ -22,16 +22,17 @@ header {
     #menu {
       width: 2.5rem;
       height: 2.5rem;
-      
+
       div {
         width: 1.5rem;
         height: .125rem;
-        background:transparent;
+        background: transparent;
         display: flex;
         position: relative;
         margin-left: auto;
 
-        &::before, &::after {
+        &::before,
+        &::after {
           display: block;
           content: '';
           width: 1.5rem;
@@ -72,13 +73,13 @@ header {
         padding: 2rem;
         transition: .3s right ease-in-out;
         z-index: 6;
-        
+
         #internal_nav {
           li {
             &:not(:last-child) {
               margin-bottom: 2rem;
             }
-  
+
             a {
               font-weight: var(--semi);
               font-size: 1.25rem;
@@ -141,6 +142,74 @@ header {
         #nav {
           right: 0;
         }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 80rem) {
+  header {
+    .container {
+      justify-content: flex-start;
+
+      #logo {
+        margin-right: 3.75rem;
+      }
+
+      #menu {
+        display: none;
+      }
+
+      #nav_overlay,
+      #nav_overlay #nav {
+        position: static;
+        height: fit-content;
+        width: fit-content;
+        visibility: visible;
+        opacity: 1;
+        background: none;
+        width: 100%;
+      }
+
+      #nav_overlay #nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+
+        #internal_nav {
+          display: flex;
+
+          li {
+            &:not(:last-child) {
+              margin-bottom: 0;
+              margin-right: 2.5rem;
+            }
+
+            a {
+              font-size: 1rem;
+              color: var(--cinza);
+            }
+          }
+        }
+
+        .nav_1280 {
+          display: flex;
+          align-items: center;
+
+          button {
+            order: 2;
+            margin: 0 0 0 2rem;
+            background: none;
+            border: 2px solid var(--preto);
+            color: var(--preto);
+          }
+
+          #social_nav li {
+            opacity: .56;
+          }
+        }
+
       }
     }
   }
