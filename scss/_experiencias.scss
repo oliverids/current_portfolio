@@ -58,11 +58,50 @@
           max-width: 27.5rem;
         }
       }
+    }
 
-      @media only screen and (min-width: 80rem) {
-        max-width: 62rem;
-        margin: 0 auto;
+    @media only screen and (min-width: 80rem) {
+      .navigation-wrapper {
+        flex-direction: column;
+
+        ul {
+          flex-wrap: initial;
+          justify-content: flex-start;
+    
+          li {
+            margin-bottom: 0;
+            width: 37rem;
+
+          }
+        }
+
+        .dots {
+          flex-direction: row;
+          width: 100%;
+          padding-right: 0;
+          padding-top: 3rem;
+
+          .dot {
+            height: 2px;
+            width: 100%;
+
+            &.dot--active {
+              height: .375rem;
+              background: var(--cinza);
+            }
+
+            &:not(:last-child) {
+              margin-right: 2rem;
+              margin-bottom: 0;
+            }
+
+            &:last-child {
+              display: none;
+            }
+          }
+        }
       }
+
     }
   }
 }

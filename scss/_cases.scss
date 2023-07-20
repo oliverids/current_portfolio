@@ -1,6 +1,5 @@
 #cases {
   .navigation-wrapper {
-    display: flex;
     flex-direction: column;
     align-items: center;
 
@@ -57,54 +56,9 @@
 
             @media only screen and (min-width: 48rem) {
               max-width: 100%;
+              margin: 1.5rem 0 0;
             }
           }
-        }
-      }
-    }
-
-    .dots {
-      display: none;
-    }
-
-    .arrow_nav {
-      display: flex;
-
-      .arrow {
-        width: 3rem;
-        height: 2.5rem;
-        background: var(--preto);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        &::before {
-          position: relative;
-          display: block;
-          width: 18px;
-          height: 18px;
-          content: url(../img/icon/arrow.svg);
-        }
-
-        &.arrow--left::before {
-          transform: rotate(180deg);
-          margin-bottom: -2px;
-        }
-
-        &.arrow--disabled {
-          opacity: .5;
-        }
-      }
-
-      .counter {
-        width: 3rem;
-        height: 2.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        span {
-          width: fit-content;
         }
       }
     }
@@ -112,44 +66,10 @@
 }
 
 @media only screen and (min-width: 80rem) {
-  #cases {
-    .container {
-      position: relative;
-
-      .section_intro {
-        margin: 0 auto 3.5rem 0;
-      }
-    }
-
+  #cases .container {
     .navigation-wrapper {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-
-      .dots {
-        order: 1;
-        width: .375rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding-right: 3rem;
-
-        .dot {
-          width: 2px;
-          height: 6rem;
-          background: #C9C4C4;
-
-          &:not(:last-child) {
-            margin-bottom: 2rem;
-          }
-
-          &.dot--active {
-            width: .375rem;
-            background: var(--cinza);
-          }
-        }
-      }
+      flex-direction: row !important;
+      align-items: center;
 
       #my-keen-slider {
         order: 2;
@@ -182,12 +102,6 @@
           }
         }
       }
-  
-      .arrow_nav {
-        position: absolute;
-        top: 1rem;
-        right: 0;
-      }
     }
   }
-} 
+}

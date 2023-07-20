@@ -97,12 +97,14 @@ function navigation(slider) {
       removeElement(dots)
       return
     }
-    dots = createDiv("dots")
+    dots = createDiv("dots");
+
     slider.track.details.slides.forEach((_e, idx) => {
       var dot = createDiv("dot", "button")
       dot.addEventListener("click", () => slider.moveToIdx(idx))
       dots.appendChild(dot)
     })
+
     wrapper.appendChild(dots)
   }
 
@@ -110,25 +112,38 @@ function navigation(slider) {
     var slide = slider.track.details.rel
     slide === 0
       ? arrowLeft.classList.add("arrow--disabled")
-      : arrowLeft.classList.remove("arrow--disabled")
+      : arrowLeft.classList.remove("arrow--disabled");
+
     slide === slider.track.details.slides.length - 1
       ? arrowRight.classList.add("arrow--disabled")
-      : arrowRight.classList.remove("arrow--disabled")
+      : arrowRight.classList.remove("arrow--disabled");
+
     Array.from(dots.children).forEach(function (dot, idx) {
       idx === slide
         ? dot.classList.add("dot--active")
         : dot.classList.remove("dot--active")
     })
 
-    span.innerText = `${slide + 1}/${screen_width < 768 || screen_width > 1279? slider.slides.length : slider.slides.length - 1}`;
-
-    if(screen_width < 767) {
-      if(slide +1 == slider.track.details.slides.length - 1) {
+    if(slider.options.slides.perView == 1) {
+      if(slide +1 == slider.track.details.slides.length) {
         arrowRight.classList.add("arrow--disabled")
       } else {
         arrowRight.classList.remove("arrow--disabled")
       }
+
+      span.innerText = `${slide + 1}/${slider.slides.length}`;
+
+    } else {
+      
+      if(slide +1 == slider.track.details.slides.length -1) {
+        arrowRight.classList.add("arrow--disabled")
+      } else {
+        arrowRight.classList.remove("arrow--disabled")
+      }
+
+      span.innerText = `${slide + 1}/${slider.slides.length - 1}`;
     }
+
   }
 
   slider.on("created", () => {
@@ -156,6 +171,20 @@ let cases_slider = new KeenSlider("#my-keen-slider", {
   },
 }, [navigation])
 
+if(screen_width > 1279) {
+  let carreira_slider_list = document.getElementById('carreira_slider'),
+  carreira_slider_items = carreira_slider_list.querySelectorAll('li');
+
+  carreira_slider_list.classList.add('keen-slider')
+  carreira_slider_items.forEach(each => each.classList.add('keen-slider__slide'))
+
+  let carreira_slider = new KeenSlider("#carreira_slider", {
+    slides: {
+      perView: 2,
+      spacing: 56
+    },
+  }, [navigation])
+}
 
 
 
