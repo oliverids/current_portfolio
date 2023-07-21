@@ -11,10 +11,10 @@
   --bold: 700;
 
   --size_p: .875rem;
+  --size_span-info: .875rem;
   --size_h1: 1.75rem;
   --size_h2: 1.5rem;
   --size_h3: 1.25rem;
-  --size_span-info: .875rem;
 
   @media only screen and (min-width: 48rem) {
     --size_p: 1rem;
@@ -24,6 +24,10 @@
   }
 
   @media only screen and (min-width: 80rem) {
+    --size_p: 1.125rem;
+    --size_span-info: 1rem;
     --size_h1: 3.5rem;
+    --size_h2: 2.5rem;
+    --size_h3: 1.75rem;
   }
 }

@@ -90,7 +90,7 @@ button {
 
   @media only screen and (min-width: 80rem) {
     padding: 1.5rem 3rem;
-
+    font-size: 1.125rem;
   }
 }
 
@@ -142,6 +142,10 @@ button {
 
   @media only screen and (min-width: 64rem) {
     margin-bottom: 3.5rem;
+  }
+
+  @media only screen and (min-width: 80rem) {
+    max-width: 37rem;
   }
 }
 
@@ -309,7 +313,7 @@ marquee {
           }
         }
       }
- 
+
       .arrow_nav {
         margin-top: 0;
         position: absolute;
