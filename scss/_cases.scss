@@ -1,7 +1,6 @@
 #cases {
   .navigation-wrapper {
-    flex-direction: column;
-    align-items: center;
+
 
     #my-keen-slider {
       .case_item {
@@ -21,7 +20,7 @@
         }
 
         .case_info {
-          span:not(.hide-768) {
+          span {
             display: block;
             font-size: var(--size_span-info);
             line-height: 1.3;
@@ -35,15 +34,6 @@
             letter-spacing: -0.0375rem;
             font-weight: var(--bold);
             margin: .25rem 0 .75rem;
-
-            .hide-768 {
-              display: inline;
-
-              @media only screen and (min-width: 48rem) and (max-width: 80rem) {
-                display: none;
-              }
-            }
-
           }
 
           p a {
@@ -55,7 +45,7 @@
 
           a {
             display: block;
-            margin: 1.5rem auto 3rem;
+            margin: 1.5rem auto 0;
             width: 90%;
             text-align: center;
 
@@ -65,7 +55,7 @@
 
             @media only screen and (min-width: 48rem) {
               max-width: 100%;
-              margin: 1.5rem 0 0;
+              margin-top: 1.5rem;
             }
           }
         }

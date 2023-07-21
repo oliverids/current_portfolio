@@ -215,6 +215,8 @@ marquee {
 
   .navigation-wrapper {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .dots {
       display: none;
@@ -222,6 +224,7 @@ marquee {
 
     .arrow_nav {
       display: flex;
+      margin-top: 3.5rem;
 
       .arrow {
         width: 3rem;
@@ -261,9 +264,9 @@ marquee {
         }
       }
 
-      @media only screen and (min-width: 48rem) {
-        margin-top: 3.5rem;
-      }
+      // @media only screen and (min-width: 48rem) {
+      //   margin-top: 3.5rem;
+      // }
     }
   }
 

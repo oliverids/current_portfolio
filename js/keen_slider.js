@@ -1,7 +1,7 @@
 let screen_width = window.innerWidth;
 
 //DISABLING KEEN SLIDER FOR SCREEN WIDER THAN 1024PX
-if(screen_width > 1023) {
+if (screen_width > 1023) {
   document.querySelectorAll('.disable-1024').forEach(each => {
     each.classList.remove('keen-slider')
     each.querySelectorAll('.keen-slider__slide').forEach(each => {
@@ -55,7 +55,7 @@ function navigation(slider) {
   }
 
   let counter = createDiv("counter"),
-  span = document.createElement('span');
+    span = document.createElement('span');
   span.innerText = `1/${slider.slides.length}`;
   counter.appendChild(span);
 
@@ -124,8 +124,8 @@ function navigation(slider) {
         : dot.classList.remove("dot--active")
     })
 
-    if(slider.options.slides.perView == 1) {
-      if(slide +1 == slider.track.details.slides.length) {
+    if (slider.options.slides.perView == 1) {
+      if (slide + 1 == slider.track.details.slides.length) {
         arrowRight.classList.add("arrow--disabled")
       } else {
         arrowRight.classList.remove("arrow--disabled")
@@ -134,8 +134,8 @@ function navigation(slider) {
       span.innerText = `${slide + 1}/${slider.slides.length}`;
 
     } else {
-      
-      if(slide +1 == slider.track.details.slides.length -1) {
+
+      if (slide + 1 == slider.track.details.slides.length - 1) {
         arrowRight.classList.add("arrow--disabled")
       } else {
         arrowRight.classList.remove("arrow--disabled")
@@ -171,20 +171,13 @@ let cases_slider = new KeenSlider("#my-keen-slider", {
   },
 }, [navigation])
 
-if(screen_width > 1279) {
-  let carreira_slider_list = document.getElementById('carreira_slider'),
-  carreira_slider_items = carreira_slider_list.querySelectorAll('li');
+let carreira_slider = new KeenSlider("#carreira_slider", {
+  slides: {
+    perView: 767 > screen_width ? 1 : 2,
+    spacing: 56
+  },
+}, [navigation])
 
-  carreira_slider_list.classList.add('keen-slider')
-  carreira_slider_items.forEach(each => each.classList.add('keen-slider__slide'))
-
-  let carreira_slider = new KeenSlider("#carreira_slider", {
-    slides: {
-      perView: 2,
-      spacing: 56
-    },
-  }, [navigation])
-}
 
 
 
