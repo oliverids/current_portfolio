@@ -47,6 +47,7 @@ main {
           color: var(--branco);
           font-size: .75rem;
           width: fit-content;
+          text-align: center;
 
           &::before {
             position: absolute;

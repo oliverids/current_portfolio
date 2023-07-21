@@ -172,4 +172,23 @@
       }
     }
   }
+
+  @media only screen and (min-width: 80rem) {
+    .container {
+      .contatos_info {
+        width: 100%;
+        max-width: 27rem;
+      }
+
+      .contatos_form .form_linha {
+        flex-direction: row;
+  
+        .label_input:not(:last-child) {
+            margin-right: 2.75rem;
+            margin-bottom: 0;
+          
+        }
+      }
+    }
+  }
 }

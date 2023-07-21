@@ -1,9 +1,9 @@
-const menu_button = document.getElementById('menu'),
+const menuButton = document.getElementById('menu'),
   header = document.querySelector('header'),
   nav = document.getElementById('nav'),
-  internal_links = document.querySelectorAll('#internal_nav a');
+  internalLinks = document.querySelectorAll('#internal_nav a', '#logo');
 
-menu_button.addEventListener('click', () => {
+menuButton.addEventListener('click', () => {
   header.classList.toggle('ativo');
 })
 
@@ -20,7 +20,7 @@ window.onclick = e => {
   }
 };
 
-internal_links.forEach(each => {
+internalLinks.forEach(each => {
   each.addEventListener('click', e => {
     e.preventDefault();
 
@@ -43,11 +43,11 @@ window.addEventListener('scroll', e => {
 });
 
 
-const copy_email = document.getElementById('email');
-copy_email.addEventListener('click', () => {
+const copyEmail = document.getElementById('email');
+copyEmail.addEventListener('click', () => {
   navigator.clipboard.writeText('isabela@webicos.com');
-  copy_email.classList.add('ativo')
-  setTimeout(() => copy_email.classList.remove('ativo'), 1000);
+  copyEmail.classList.add('ativo')
+  setTimeout(() => copyEmail.classList.remove('ativo'), 1000);
 });
 
 //BAFFLE JS
@@ -60,12 +60,12 @@ function scrolled_into_view(el) {
   return isVisible;
 }
 
-const baffle_titles = document.querySelectorAll('.section h2, footer h2');
+const baffleTitles = document.querySelectorAll('.section h2, footer h2');
 let a = baffle('.h1_baffle').start();
 a.reveal(1300)
 
 window.onscroll = e => {
-  baffle_titles.forEach(title => {
+  baffleTitles.forEach(title => {
     if (scrolled_into_view(title) && !title.classList.contains('baffle')) {
       title.classList.add('baffle')
       let b = baffle(title).start();

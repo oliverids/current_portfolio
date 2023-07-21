@@ -149,6 +149,8 @@ header {
 
 @media only screen and (min-width: 80rem) {
   header {
+    padding: 1.5rem 0;
+
     .container {
       justify-content: flex-start;
 
@@ -205,8 +207,12 @@ header {
             color: var(--preto);
           }
 
-          #social_nav li {
+          #social_nav li a {
             opacity: .56;
+
+            &:hover {
+            opacity: .8;
+            }
           }
         }
 
