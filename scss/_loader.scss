@@ -1,0 +1,52 @@
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  height: 100vh;
+  width: 100vw;
+  background: var(--branco);
+  box-shadow: 0 1px #ccc;
+  visibility: visible;
+
+  .container {
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 13rem;
+      margin-bottom: 2rem;
+
+      img {
+        width: 6rem;
+        margin-right: 1rem;
+      }
+
+      p {
+        line-height: 1.2;
+        letter-spacing: -0.01581rem;
+        font-weight: var(--medium);
+        font-size: 1rem;
+      }
+    }
+
+    #preloader_inner {
+      font-size: 5.5rem;
+      font-weight: var(--medium);
+      letter-spacing: -0.0825rem;
+      line-height: 1;
+      color: #CDCDCD;
+    }
+  }
+
+  &.hide {
+    visibility: hidden;
+    top: -100vh;
+    transition: .5s all ease-in-out;
+  }
+}
