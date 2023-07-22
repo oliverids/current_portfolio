@@ -21,7 +21,7 @@
 #cursor {
   width: 2.5rem;
   height: 2.5rem;
-  transition: .05s all ease-out;
+  // transition: .05s all ease-out;
 
   &.hover-link {
     width: 4rem;
@@ -45,6 +45,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  cursor: none;
 
   &:focus {
     outline-color: #a2a8dc;
