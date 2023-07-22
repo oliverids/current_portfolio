@@ -112,6 +112,7 @@
 
       button {
         background: var(--branco);
+        font-weight: var(--bold);
         color: var(--preto);
         margin-top: 4.5rem;
       }
@@ -182,13 +183,19 @@
 
       .contatos_form .form_linha {
         flex-direction: row;
-  
+
         .label_input:not(:last-child) {
-            margin-right: 2.75rem;
-            margin-bottom: 0;
-          
+          margin-right: 2.75rem;
+          margin-bottom: 0;
+
         }
       }
+    }
+  }
+
+  @media only screen and (min-width: 96rem) {
+    .container .contatos_info {
+      max-width: 30.5rem;
     }
   }
 }

@@ -38,26 +38,31 @@
           }
         }
       }
-    }
-  }
-}
 
-@media only screen and (min-width: 64rem) {
-  #sobre_slider {
-    width: 100%;
-    max-width: none !important;
-    margin: 0 !important;
-    display: flex;
-    justify-content: space-between;
-    
-    li {
-      width: 19rem;
-    }
-  }
-}
+      @media only screen and (min-width: 64rem) {
+        width: 100%;
+        max-width: none !important;
+        margin: 0 !important;
+        display: flex;
+        justify-content: space-between;
 
-@media only screen and (min-width: 80rem) {
-  #sobre_slider li {
-    width: 22rem;
+        li {
+          width: 19rem;
+        }
+
+      }
+
+      @media only screen and (min-width: 80rem) {
+        li {
+          width: 22rem;
+        }
+      }
+
+      @media only screen and (min-width: 96rem) {
+        li {
+          width: 24rem;
+        }
+      }
+    }
   }
 }

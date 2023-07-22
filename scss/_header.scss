@@ -149,7 +149,7 @@ header {
 
 @media only screen and (min-width: 80rem) {
   header {
-    padding: 1.5rem 0;
+    padding: 1.2rem 0;
 
     .container {
       justify-content: flex-start;
@@ -218,5 +218,11 @@ header {
 
       }
     }
+  }
+}
+
+@media only screen and (min-width: 96rem) {
+  header {
+    padding: 1.5rem 0;
   }
 }

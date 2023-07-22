@@ -167,9 +167,13 @@ function navigation(slider) {
 let cases_slider = new KeenSlider("#my-keen-slider", {
   slides: {
     perView: 767 > screen_width ? 1 : screen_width > 1279 ? 1 : 2,
-    spacing: 56
+    // spacing: 56
+    // spacing: 300
+    spacing: screen_width > 1279 ? 32 : 56
   },
 }, [navigation])
+
+// console.log(cases_slider)
 
 let carreira_slider = new KeenSlider("#carreira_slider", {
   slides: {
