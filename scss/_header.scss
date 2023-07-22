@@ -61,7 +61,7 @@ header {
       background: rgba(0, 0, 0, 0.3);
       visibility: hidden;
       opacity: 0;
-      transition: .3s all ease-in-out;
+      transition: .3s opacity ease-in-out;
 
       #nav {
         position: absolute;
