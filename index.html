@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.css">
   <script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js"></script>
 
+  <!-- AOS ANIMATE -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
   <!-- META TAGS -->
   <meta name="theme-color" content="#000" />
   <meta name="keywords" content="ui, ux, development, desenvolvimento, design, web, uxui" />
@@ -38,7 +42,6 @@
     loaderDiv.classList.add('ativo');
   </script> -->
   <script src="js/loader.js"></script>
-
 
   <header id="header">
     <div class="container">
@@ -147,7 +150,7 @@
     </section>
   </main>
 
-  <section id="sobre" class="section">
+  <section id="sobre" class="section" data-aos="fade-up" data-aos-once="true">
     <div class="container">
       <div class="section_intro">
         <p>Sobre mim e minha trajetória</p>
@@ -173,7 +176,7 @@
     </div>
   </section>
 
-  <section id="cases" class="section keen-1280">
+  <section id="cases" class="section keen-1280" data-aos="fade-up" data-aos-once="true">
     <div class="container">
       <div class="section_intro">
         <p>Confira parte dos meus projetos</p>
@@ -276,7 +279,7 @@
     </ul>
   </marquee>
 
-  <section id="experiencias" class="section keen-1280">
+  <section id="experiencias" class="section keen-1280" data-aos="fade-up" data-aos-once="true">
     <div class="container">
       <div class="section_intro">
         <p>Conheça um pouco sobre minha carreira</p>
@@ -406,7 +409,7 @@
   </section>
 
   <footer id="contatos">
-    <div class="container">
+    <div class="container" data-aos="fade-up" data-aos-once="true">
       <div class="contatos_info">
         <div class="section_intro">
           <p>Vamos conversar</p>
@@ -449,6 +452,10 @@
 
   <script src="js/keen_slider.js"></script>
   <script src="js/main.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
