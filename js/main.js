@@ -51,36 +51,36 @@ copyEmail.addEventListener('click', () => {
 });
 
 //CUSTOM CURSOR
-let cursor = document.getElementById('cursor'),
-  cursor2 = document.getElementById('cursor2');
+// let cursor = document.getElementById('cursor'),
+//   cursor2 = document.getElementById('cursor2');
 
-  let cursorLinks = document.querySelectorAll('a, button'),
-  cursorSections = document.querySelectorAll('#main_experiencias, marquee, footer');
+//   let cursorLinks = document.querySelectorAll('a, button'),
+//   cursorSections = document.querySelectorAll('#main_experiencias, marquee, footer');
 
-document.addEventListener('mousemove', e => {
-  cursor.style.cssText = cursor2.style.cssText = `left: ${e.clientX}px; top: ${e.clientY}px;`;
-})
+// document.addEventListener('mousemove', e => {
+//   cursor.style.cssText = cursor2.style.cssText = `left: ${e.clientX}px; top: ${e.clientY}px;`;
+// })
 
-cursorLinks.forEach(each => {
-  each.addEventListener('mouseenter', e => {
-    cursor.classList.add('hover-link')
-    cursor2.classList.add('hover-link')
-  })
+// cursorLinks.forEach(each => {
+//   each.addEventListener('mouseenter', e => {
+//     cursor.classList.add('hover-link')
+//     cursor2.classList.add('hover-link')
+//   })
 
-  each.addEventListener('mouseleave', e => {
-    cursor.classList.remove('hover-link')
-    cursor2.classList.remove('hover-link')
-  })
-})
+//   each.addEventListener('mouseleave', e => {
+//     cursor.classList.remove('hover-link')
+//     cursor2.classList.remove('hover-link')
+//   })
+// })
 
-cursorSections.forEach(each => {
-  each.addEventListener('mouseenter', e => {
-    cursor.classList.add('hover-section')
-    cursor2.classList.add('hover-section')
-  })
+// cursorSections.forEach(each => {
+//   each.addEventListener('mouseenter', e => {
+//     cursor.classList.add('hover-section')
+//     cursor2.classList.add('hover-section')
+//   })
 
-  each.addEventListener('mouseleave', e => {
-    cursor.classList.remove('hover-section')
-    cursor2.classList.remove('hover-section')
-  })
-})
+//   each.addEventListener('mouseleave', e => {
+//     cursor.classList.remove('hover-section')
+//     cursor2.classList.remove('hover-section')
+//   })
+// })
