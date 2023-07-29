@@ -233,12 +233,12 @@ button {
 
 *::-webkit-scrollbar-track {
   border-radius: 2px;
-  background-color: #a7a7a7;
+  background-color: #c7c7c7;
   border: 3px solid #FFFFFF;
 }
 
 *::-webkit-scrollbar-thumb {
-  border-radius: 10px;
+  // border-radius: 10px;
   background-color: #202020;
 }
 
@@ -266,6 +266,7 @@ marquee {
     li {
       display: flex;
       align-items: center;
+      font-weight: 500;
       color: var(--branco);
       white-space: nowrap;
       min-width: fit-content !important;

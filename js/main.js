@@ -11,10 +11,9 @@ window.onclick = e => {
   if (
     header.classList.contains('ativo') &&
     !e.target.matches('#nav') &&
-    !e.target.matches('#header') &&
-    !e.target.matches('#header .container') &&
     !e.target.matches('#menu') &&
-    !e.target.matches('#menu div')
+    !e.target.matches('#menu div') &&
+    !e.target.matches('.nav_1280')
   ) {
     header.classList.remove('ativo')
   }

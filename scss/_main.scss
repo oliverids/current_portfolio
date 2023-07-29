@@ -71,12 +71,13 @@ main {
     padding: 3.5rem 0;
 
     .container {
-      padding-right: 0;
+      padding-inline: 0;
 
-      p {
+      h2 {
         display: flex;
         align-items: center;
         justify-content: center;
+        font-weight: 600;
         padding: 0 3.375rem;
         color: var(--branco);
         font-size: 1.25rem;
@@ -111,6 +112,7 @@ main {
           display: flex;
           justify-content: center;
           opacity: .7;
+          transition: .3s linear;
 
           a {
             display: flex;
