@@ -27,8 +27,6 @@
 </head>
 
 <body>
-  <!-- <div id="cursor" aria-hidden="true"></div>
-  <div id="cursor2" aria-hidden="true"></div> -->
 
   <div id="loader">
     <div class="container">
@@ -56,7 +54,7 @@
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#cases">Cases</a></li>
             <li><a href="#experiencias">Experiências</a></li>
-            <li><a href="#contatos">Contatos</a></li>
+            <li><a href="#contato">Contato</a></li>
           </ul>
 
           <div class="nav_1280">
@@ -113,12 +111,28 @@
       <section id="main_image">
         <img src="img/hero__image.png" alt="Imagem pessoal.">
 
-        <img src="img/icon/hero__asset--01.svg" data-aos="fade-down-left" data-aos-delay="3000" data-aos-duration="1000" class="aos-init hero_icon code" alt=""
-          aria-hidden="true">
-        <img src="img/icon/hero__asset--02.svg" data-aos="fade-up-left" data-aos-delay="3000" data-aos-duration="1000" class="aos-init hero_icon research" alt=""
-          aria-hidden="true">
-        <img src="img/icon/hero__asset--03.svg" data-aos="fade-up-right" data-aos-delay="3000" data-aos-duration="1000" class="aos-init hero_icon design" alt=""
-          aria-hidden="true">
+        <img src="img/icon/hero__asset--01.svg" 
+        class="lax hero_icon code" 
+        aria-hidden="true" 
+        data-rellax-speed="-2" 
+        data-rellax-max="120" 
+        data-rellax-min="40"
+        >
+
+        <img src="img/icon/hero__asset--02.svg" 
+        class="lax hero_icon research" 
+        aria-hidden="true" 
+        data-rellax-speed="3" 
+        data-rellax-max="120" 
+        data-rellax-min="-40">
+
+        <img src="img/icon/hero__asset--03.svg" 
+        class="lax hero_icon design" 
+        aria-hidden="true" 
+        data-rellax-speed="2" 
+        data-rellax-max="120" 
+        data-rellax-min="-80">
+
       </section>
     </div>
 
@@ -409,7 +423,7 @@
     </div>
   </section>
 
-  <footer id="contatos">
+  <footer id="contato">
     <div class="container" data-aos="fade-up" data-aos-once="true" data-aos-duration="1000">
       <div class="contatos_info">
         <div class="section_intro">
@@ -452,10 +466,15 @@
   </footer>
 
   <script src="js/keen_slider.js"></script>
+  <script src="js/rellax.js"></script>
   <script src="js/main.js"></script>
-
   <script>
     AOS.init();
+
+    var rellax = new Rellax('.lax', { 
+      center: true, 
+    });
+
   </script>
 </body>
 

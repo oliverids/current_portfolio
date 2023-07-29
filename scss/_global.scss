@@ -44,7 +44,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  cursor: none;
 
   &:focus {
     outline-color: #a2a8dc;
@@ -53,7 +52,6 @@
 
 html {
   scroll-behavior: smooth;
-  cursor: none;
 }
 
 body {
@@ -71,7 +69,6 @@ span {
 
 a {
   text-decoration: none;
-  cursor: none;
 
   &:hover {
     text-decoration: underline;
@@ -92,6 +89,10 @@ button {
   border: none;
   background: none;
   font-size: 1rem;
+}
+
+.lax{
+  transition: transform 10s cubic-bezier(0, 1, 0.5, 1);
 }
 
 .container {
@@ -134,9 +135,18 @@ button {
   letter-spacing: -0.015rem;
   text-align: center;
   font-family: 'Space Grotesk', sans-serif;
+  border: 2px solid transparent;
+  transition: .3s linear;
 
   @media only screen and (min-width: 80rem) {
     font-size: 1.125rem;
+
+    &:hover{
+      background: var(--branco);
+      color: var(--preto);
+      border-color: var(--preto);
+      text-decoration: none;
+    }
   }
 
   @media only screen and (min-width: 96rem) {
