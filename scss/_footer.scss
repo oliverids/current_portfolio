@@ -8,12 +8,12 @@
     max-width: 30rem;
 
     &.creditos {
-      font-size: var(--size_span-info);
+      font-size: .875rem;
       text-align: center;
       margin: 0 auto;
 
       &:not(:last-child) {
-        margin: 3.5rem auto .5rem;
+        margin: 4.5rem auto .5rem;
       }
 
       a {
@@ -152,6 +152,8 @@
   }
 
   @media only screen and (min-width: 64rem) {
+    padding: 3.5rem 0 2rem;
+
     .container {
       flex-direction: row;
       justify-content: space-between;

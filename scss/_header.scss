@@ -90,7 +90,7 @@ header {
           }
         }
 
-        button {
+        .btn_principal {
           width: 100%;
           padding: 1rem 2.5rem;
           margin: 3rem 0 2rem;
@@ -200,19 +200,24 @@ header {
           display: flex;
           align-items: center;
 
-          button {
+          .btn_principal {
             order: 2;
             margin: 0 0 0 2rem;
             background: none;
             border: 2px solid var(--preto);
             color: var(--preto);
+
+            &:hover {
+              background: var(--preto);
+              color: var(--branco);
+            }
           }
 
           #social_nav li a {
             opacity: .56;
 
             &:hover {
-            opacity: .8;
+              opacity: .8;
             }
           }
         }
