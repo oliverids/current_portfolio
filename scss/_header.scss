@@ -36,13 +36,8 @@ header {
           visibility: visible;
         }
       }
-      
-  
-    
-     
   }
   
-
   .container {
     align-items: center;
     justify-content: space-between;
@@ -119,6 +114,7 @@ header {
 
         #social_nav {
           display: flex;
+          align-items: center;
 
           li {
             &:not(:last-child) {
@@ -137,6 +133,18 @@ header {
               &:hover {
                 text-decoration: none;
                 opacity: .5;
+              }
+            }
+
+            &.language {
+              a {
+                color: var(--preto);
+                font-weight: var(--bold);
+                height: fit-content;
+                width: fit-content;
+                padding: .8rem;
+                line-height: 1;
+                font-size: 1.125rem;
               }
             }
           }
@@ -229,7 +237,7 @@ header {
             }
           }
 
-          #social_nav li a {
+          #social_nav li a:not(.language a) {
             opacity: .56;
 
             &:hover {

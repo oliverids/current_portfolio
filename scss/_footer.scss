@@ -48,10 +48,15 @@
       align-items: center;
       margin: 2rem 0 0;
       position: relative;
+      display: flex;
+      align-items: center;
 
-      &::after {
-        content: url(../img/icon/copy.svg);
-        margin-left: 1rem;
+      span {
+        margin-right: 1rem;
+      }
+
+      svg path {
+        transition: .3s linear;
       }
 
       &::before {
@@ -77,6 +82,14 @@
         visibility: visible;
         opacity: 1;
         transition: .3s all ease-in-out;
+      }
+
+      @media only screen and (min-width: 80rem) {
+        &:hover {
+          svg path {
+            stroke: var(--preto);
+          }
+        }
       }
     }
 
