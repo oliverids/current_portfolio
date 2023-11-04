@@ -82,16 +82,16 @@
         left: 0;
 
         .dot {
-          width: 2px;
-          height: 6rem;
+          width: .15rem;
+          height: 5rem;
           background: #C9C4C4;
 
           &:not(:last-child) {
-            margin-bottom: 2rem;
+            margin-bottom: 1.3rem;
           }
 
           &.dot--active {
-            width: .375rem;
+            width: .3rem;
           }
         }
       }
