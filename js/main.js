@@ -49,37 +49,29 @@ copyEmail.addEventListener('click', () => {
   setTimeout(() => copyEmail.classList.remove('ativo'), 1000);
 });
 
-//CUSTOM CURSOR
-// let cursor = document.getElementById('cursor'),
-//   cursor2 = document.getElementById('cursor2');
+// VALIDAÇÃO FORMULÁRIO
+document.querySelector('.contatos_form').addEventListener('submit', function (event) {
+  const honeypot = document.getElementById('honeypot').value;
+  if (honeypot) {
+    event.preventDefault(); // Impede envio se o campo oculto estiver preenchido
+    alert('Envio bloqueado devido a comportamento suspeito.');
+  }
+});
 
-//   let cursorLinks = document.querySelectorAll('a, button'),
-//   cursorSections = document.querySelectorAll('#main_experiencias, marquee, footer');
+window.onload = function () {
+  document.getElementById('btn_submit').disabled = false;
+};
 
-// document.addEventListener('mousemove', e => {
-//   cursor.style.cssText = cursor2.style.cssText = `left: ${e.clientX}px; top: ${e.clientY}px;`;
-// })
+window.onload = function () {
+  setTimeout(() => {
+    document.getElementById('btn_submit').disabled = false;
+  }, 1000); // Habilita após 3 segundos
+};
 
-// cursorLinks.forEach(each => {
-//   each.addEventListener('mouseenter', e => {
-//     cursor.classList.add('hover-link')
-//     cursor2.classList.add('hover-link')
-//   })
-
-//   each.addEventListener('mouseleave', e => {
-//     cursor.classList.remove('hover-link')
-//     cursor2.classList.remove('hover-link')
-//   })
-// })
-
-// cursorSections.forEach(each => {
-//   each.addEventListener('mouseenter', e => {
-//     cursor.classList.add('hover-section')
-//     cursor2.classList.add('hover-section')
-//   })
-
-//   each.addEventListener('mouseleave', e => {
-//     cursor.classList.remove('hover-section')
-//     cursor2.classList.remove('hover-section')
-//   })
-// })
+document.querySelector('.contatos_form').addEventListener('submit', function (event) {
+  const email = document.getElementById('input_email').value;
+  if (!email.includes('@')) {
+    event.preventDefault(); // Impede envio se o email for inválido
+    alert('Por favor, insira um e-mail válido.');
+  }
+});

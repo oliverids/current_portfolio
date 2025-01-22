@@ -523,6 +523,11 @@
       </div>
 
       <form class="contatos_form" action="https://formspree.io/f/xaygnjko" method="POST">
+        <div style="display:none;">
+          <label for="honeypot">Deixe este campo vazio:</label>
+          <input type="text" id="honeypot" name="honeypot">
+        </div>
+
         <div class="form_linha">
           <div class="label_input">
             <label for="nome">Nome</label>
@@ -540,7 +545,7 @@
           <textarea name="mensagem" id="mensagem" rows="1" placeholder="Escreva aqui sua mensagem" required></textarea>
         </div>
 
-        <button type="submit" class="btn_principal">Enviar mensagem</button>
+        <button type="submit" id="btn_submit" class="btn_principal" disabled>Enviar mensagem</button>
       </form>
     </div>
 
