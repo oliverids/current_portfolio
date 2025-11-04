@@ -1,0 +1,9 @@
+{
+  "name": "current_portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website",
+  "engines": {
+    "node": "22.x"
+  }
+}
+
