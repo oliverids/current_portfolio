@@ -55,7 +55,7 @@ html {
 }
 
 body {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 img {
@@ -91,7 +91,7 @@ button {
   font-size: 1rem;
 }
 
-.lax{
+.lax {
   transition: transform 10s cubic-bezier(0, 1, 0.5, 1);
 }
 
@@ -134,14 +134,14 @@ button {
   font-weight: var(--semi);
   letter-spacing: -0.015rem;
   text-align: center;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   border: 2px solid transparent;
-  transition: .3s linear;
+  transition: 0.3s linear;
 
   @media only screen and (min-width: 80rem) {
     font-size: 1.125rem;
 
-    &:hover{
+    &:hover {
       background: var(--branco);
       color: var(--preto);
       border-color: var(--preto);
@@ -183,14 +183,14 @@ button {
   }
 
   p {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 
   h1 {
     line-height: 1.1;
     font-size: var(--size_h1);
     letter-spacing: -0.0525rem;
-    margin: .375rem 0 .75rem;
+    margin: 0.375rem 0 0.75rem;
   }
 
   h2 {
@@ -214,7 +214,6 @@ button {
 
   @media only screen and (min-width: 96rem) {
     margin-bottom: 6rem;
-
   }
 }
 
@@ -222,19 +221,19 @@ button {
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #CCCCCC #767676;
+  scrollbar-color: #cccccc #767676;
 }
 
 /* Chrome, Edge and Safari */
 *::-webkit-scrollbar {
-  width: .5rem;
-  height: .5rem;
+  width: 0.5rem;
+  height: 0.5rem;
 }
 
 *::-webkit-scrollbar-track {
   border-radius: 2px;
   background-color: #c7c7c7;
-  border: 3px solid #FFFFFF;
+  border: 3px solid #ffffff;
 }
 
 *::-webkit-scrollbar-thumb {
@@ -286,7 +285,6 @@ marquee {
 
 // KEEN SLIDER
 .keen-1280 .container {
-
   .navigation-wrapper {
     display: flex;
     flex-direction: column;
@@ -322,7 +320,7 @@ marquee {
         }
 
         &.arrow--disabled {
-          opacity: .5;
+          opacity: 0.5;
         }
       }
 
@@ -359,7 +357,7 @@ marquee {
         align-items: center;
 
         .dot {
-          background: #C9C4C4;
+          background: #c9c4c4;
 
           &.dot--active {
             background: var(--cinza) !important;
@@ -370,7 +368,7 @@ marquee {
       .arrow_nav {
         margin-top: 0;
         position: absolute;
-        top: .8rem;
+        top: 0.8rem;
         right: 0;
       }
     }

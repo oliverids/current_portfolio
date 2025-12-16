@@ -9,6 +9,7 @@
       }
 
       li {
+        margin-bottom: 2rem;
         p {
           line-height: 1.75;
 
@@ -21,7 +22,7 @@
             display: flex;
             width: 2rem;
             height: 2rem;
-            transform: scale(.8);
+            transform: scale(0.8);
             margin-bottom: 1.25rem;
           }
 
@@ -48,8 +49,8 @@
 
         li {
           width: 19rem;
+          margin-bottom: 0;
         }
-
       }
 
       @media only screen and (min-width: 80rem) {
