@@ -15,7 +15,7 @@ if (screen_width > 1023) {
 let main_experiencias_slider = new KeenSlider("#experiencias_slider", {
   slides: {
     origin: "center",
-    perView: screen_width < 576 ? 2.2 : 2.5,
+    perView: screen_width < 576 ? 1 : 2.5,
     spacing: 60
   },
 })

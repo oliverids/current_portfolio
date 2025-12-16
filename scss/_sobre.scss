@@ -1,4 +1,8 @@
 #sobre {
+  @media only screen and (min-width: 48rem) {
+    margin-bottom: 10rem;
+  }
+
   .container {
     #sobre_slider {
       margin: 0 auto;
