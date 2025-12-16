@@ -182,6 +182,13 @@ let carreira_slider = new KeenSlider("#carreira_slider", {
   },
 }, [navigation])
 
+let academicas_slider = new KeenSlider("#academicas_slider", {
+  slides: {
+    perView: screen_width < 1024 ? 1 : 2,
+    spacing: 40
+  },
+}, [navigation])
+
 
 
 

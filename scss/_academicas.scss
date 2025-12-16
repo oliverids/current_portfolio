@@ -1,0 +1,111 @@
+#academicas {
+  margin: 7rem 0;
+
+  @media only screen and (min-width: 48rem) {
+    margin: 12rem 0;
+  }
+  .container {
+    ul {
+      align-items: flex-start;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h3 {
+          font-size: 1.25rem;
+          font-weight: var(--bold);
+          margin-bottom: 0.5rem;
+          line-height: 1.2;
+        }
+
+        .academica-tag {
+          text-transform: uppercase;
+          color: var(--branco);
+          padding: 0.5rem 1rem;
+          background: var(--preto);
+          width: fit-content;
+          margin: 0.5rem 0 1rem;
+          font-size: 0.875rem;
+          font-weight: var(--medium);
+          display: block;
+        }
+
+        span {
+          color: var(--cinza);
+          margin-bottom: 1rem;
+        }
+
+        p {
+          margin: 1rem 0 1.5rem;
+          max-width: 30rem;
+          font-size: 1rem !important;
+        }
+
+        a {
+          width: fit-content;
+        }
+      }
+
+      @media only screen and (min-width: 48rem) {
+        li {
+          max-width: 20.25rem;
+
+          p {
+            max-width: none;
+          }
+        }
+      }
+
+      @media only screen and (min-width: 64rem) {
+        li {
+          max-width: 27.5rem;
+        }
+      }
+    }
+
+    @media only screen and (min-width: 80rem) {
+      .navigation-wrapper {
+        flex-direction: column;
+
+        ul {
+          flex-wrap: initial;
+          justify-content: flex-start;
+
+          li {
+            margin-bottom: 0;
+            width: 37rem;
+          }
+        }
+
+        .dots {
+          position: static;
+          flex-direction: row;
+          width: 100%;
+          padding-right: 0;
+          padding-top: 3rem;
+
+          .dot {
+            height: 2px;
+            width: 100%;
+
+            &.dot--active {
+              height: 0.375rem;
+            }
+
+            &:last-child {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    @media only screen and (min-width: 96rem) {
+      .navigation-wrapper .dots {
+        padding-top: 6rem;
+      }
+    }
+  }
+}
